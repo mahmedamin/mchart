@@ -16,16 +16,16 @@ function myFunction() {
         // ]
 
         /**
-         * Skip 1st and 2nd step
+         * Low profit on 1st n 2nd
          */
         let stepPercentage = [
-            0, // Step 1
-            0, // Step 2
-            3.1, // Step 3
-            6.1, // Step 4
-            12.6, // Step 5
-            25.5, // Step 6
-            52.7, // Step 7
+            0.55, // Step 1
+            1.1, // Step 2
+            1.737, // Step 3
+            6.056, // Step 4
+            12.477, // Step 5
+            25.58, // Step 6
+            52.5, // Step 7
         ]
 
         let t = 0;
