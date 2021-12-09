@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <input type="text" id="input-txt" value="600">
+</head>
+<body>
+<script>
+    function copyToClipboard() {
+        var dummy = document.createElement("textarea");
+        document.body.appendChild(dummy);
+        dummy.value = txt;
+        dummy.select();
+        document.execCommand("copy");
+        document.body.removeChild(dummy);
+    }
+
+
+    var txt = '';
+    step1 = 1.2;
+    step2 = stepn = 2.5;
+
+    txt += `${step1}\n${step2}\n`;
+
+    total = step1 + step2;
+    for (let n = 3; n < 8; n++) {
+        stepn = parseFloat((stepn + (stepn * 0.05)).toFixed(2));
+        winAmtn = stepn * 1.95;
+        total += stepn;
+        txt += stepn;
+        if (n < 8) {
+            txt += '\n';
+        }
+        // console.log('step' + n, stepn);
+    }
+    console.log('-t', total);
+</script>
+</body>
+</html>

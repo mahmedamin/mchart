@@ -1,0 +1,225 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        >
+        <link rel="stylesheet" href="./app.css">
+        <title>Ok-MINI Steps</title>
+        <style>
+
+body {
+    background-color: #E3E3E3;
+}
+
+._glass-morphisim {
+    /* From https://css.glass */
+    background-color: transparent;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+._card {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.table {
+    border-color: #0E0E0E !important;
+}
+
+.text-transform-capitalize {
+    text-transform: capitalize;
+}
+
+.form-control {
+    background-color: #E3E3E3 !important;
+    border-color: #0E0E0E !important;
+}
+
+
+
+.center {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* background-color: red; */
+}
+
+.box {
+    position: relative;
+}
+
+.shape-1 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #9918CB;
+    opacity: 0.4;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    left: -40px;
+    top: 20px;
+
+}
+
+.shape-2 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #F22777;
+    opacity: 0.8;
+    z-index: -1;
+    display: flex;
+    flex: 0 0 1;
+    bottom: -10px;
+    right: -20px;
+}
+td
+{
+    text-align:center;
+}
+.btn:hover
+{
+    background-color:#9918CB;
+    opacity:0.5;
+}
+
+/* .shape-3 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #D9BD16;
+
+    z-index: -1;
+    display: flex;
+    flex: 0 0 1;
+    bottom: 50%;
+    right: 50%;
+} */
+
+@media only screen and (max-width: 600px) {
+
+    body
+    {
+        background-color:white;
+    }
+
+    .form-control 
+    {
+        background-color: white !important;
+    }
+
+    ._glass-morphisim {
+
+        border: 0px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0px 0px rgb(0 0 0 / 10%)
+    }
+    .shape-1,.shape-2,.shape-3
+    {
+        display:none;
+    }
+}
+        </style>
+        <!-- <script src="hotreload.js"></script> -->
+    </head>
+    <body>
+        <div class="center">
+            <div class="box col-md-4">
+                <div class="shape-1"></div>
+                <div class="shape-2"></div>
+                <div class="shape-3"></div>
+                <div class="_glass-morphisim p-4 mt-5">
+                    <div class="input-group mb-3">
+                        <input
+                            id="value"
+                            type="number"
+                            class="form-control"
+                            placeholder="USDT"
+                            aria-label="Recipient's username"
+                            aria-describedby="button-addon2"
+                            value="600"
+                        >
+                        <button
+                            class="btn btn-outline-secondary"
+                            type="button"
+                            id="button-addon2"
+                            onclick="myFunction()"
+                        >GET PLAN</button>
+                    </div>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="text-transform-capitalize" scope="col">issues</th>
+                                <th class="text-transform-capitalize" scope="col">buy amount</th>
+                                <th class="text-transform-capitalize" scope="col">win amount</th>
+                                <th class="text-transform-capitalize" scope="col">net profit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Step 1</th>
+                                <td id="buyAmount1"></td>
+                                <td id="winAmount1"></td>
+                                <td id="netProfit1"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Step 2</th>
+                                <td id="buyAmount2"></td>
+                                <td id="winAmount2"></td>
+                                <td id="netProfit2"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Step 3</th>
+                                <td id="buyAmount3"></td>
+                                <td id="winAmount3"></td>
+                                <td id="netProfit3"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Step 4</th>
+                                <td id="buyAmount4"></td>
+                                <td id="winAmount4"></td>
+                                <td id="netProfit4"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Step 5</th>
+                                <td id="buyAmount5"></td>
+                                <td id="winAmount5"></td>
+                                <td id="netProfit5"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Step 6</th>
+                                <td id="buyAmount6"></td>
+                                <td id="winAmount6"></td>
+                                <td id="netProfit6"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Step 7</th>
+                                <td id="buyAmount7"></td>
+                                <td id="winAmount7"></td>
+                                <td id="netProfit7"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="./script.js"></script>
+    </body>
+</html>
