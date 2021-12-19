@@ -3,19 +3,6 @@ function myFunction() {
     let value = parseInt(document.getElementById("value").value);
     if (value != NaN) {
         /**
-         * Zero profit/loss after 2nd step
-         */
-        // let stepPercentage = [
-        //     0.99, // Step 1
-        //     1.754, // Step 2
-        //     2.888, // Step 3
-        //     5.929, // Step 4
-        //     12.168, // Step 5
-        //     24.98, // Step 6
-        //     51.291, // Step 7
-        // ]
-
-        /**
          * Low profit on 1st n 2nd
          */
         let stepPercentage = [
