@@ -4,15 +4,16 @@ function myFunction() {
     if (value != NaN) {
 
         let stepPercentage = [
-            0.3, // Step 1
-            0.6, // Step 2
-            1.3, // Step 3
-            2.8, // Step 4
-            5.8, // Step 5
-            12, // Step 6
-            25, // Step 7
-            52.2, // Step 8
-        ]
+            0.13, // Step 1
+            0.3, // Step 2
+            0.6, // Step 3
+            1.3, // Step 4
+            2.8, // Step 5
+            5.8, // Step 6
+            12, // Step 7
+            25, // Step 8
+            52.06, // Step 9
+        ];
 
 
         let t = 0;
@@ -29,8 +30,9 @@ function myFunction() {
         let step6 = parseFloat((value * (stepPercentage[5] / 100)).toFixed(2));
         let step7 = parseFloat((value * (stepPercentage[6] / 100)).toFixed(2));
         let step8 = parseFloat((value * (stepPercentage[7] / 100)).toFixed(2));
+        let step9 = parseFloat((value * (stepPercentage[8] / 100)).toFixed(2));
 
-        let buyTotal = step1 + step2 + step3 + step4 + step5 + step6 + step7 + step8;
+        let buyTotal = step1 + step2 + step3 + step4 + step5 + step6 + step7 + step8 + step9;
         console.log('buyTotal',buyTotal)
         let winAmount1 = (step1 * 1.95).toFixed(2);
         let winAmount2 = (step2 * 1.95).toFixed(2);
@@ -40,6 +42,7 @@ function myFunction() {
         let winAmount6 = (step6 * 1.95).toFixed(2);
         let winAmount7 = (step7 * 1.95).toFixed(2);
         let winAmount8 = (step8 * 1.95).toFixed(2);
+        let winAmount9 = (step9 * 1.95).toFixed(2);
 
 
         document.getElementById("buyAmount1").innerText = step1;
@@ -50,6 +53,7 @@ function myFunction() {
         document.getElementById("buyAmount6").innerText = step6;
         document.getElementById("buyAmount7").innerText = step7;
         document.getElementById("buyAmount8").innerText = step8;
+        document.getElementById("buyAmount9").innerText = step9;
 
         document.getElementById("winAmount1").innerText = winAmount1;
         document.getElementById("winAmount2").innerText = winAmount2;
@@ -59,6 +63,7 @@ function myFunction() {
         document.getElementById("winAmount6").innerText = winAmount6;
         document.getElementById("winAmount7").innerText = winAmount7;
         document.getElementById("winAmount8").innerText = winAmount8;
+        document.getElementById("winAmount9").innerText = winAmount9;
 
         document.getElementById("netProfit1").innerText = (winAmount1 - step1).toFixed(2);
         document.getElementById("netProfit2").innerText = (parseFloat(winAmount2) - (parseFloat(step1) + parseFloat(step2))).toFixed(2);
@@ -68,6 +73,7 @@ function myFunction() {
         document.getElementById("netProfit6").innerText = (parseFloat(winAmount6) - (parseFloat(step1) + parseFloat(step2) + parseFloat(step3) + parseFloat(step4) + parseFloat(step5) + parseFloat(step6))).toFixed(2);
         document.getElementById("netProfit7").innerText = (parseFloat(winAmount7) - (parseFloat(step1) + parseFloat(step2) + parseFloat(step3) + parseFloat(step4) + parseFloat(step5) + parseFloat(step6) + parseFloat(step7))).toFixed(2);
         document.getElementById("netProfit8").innerText = (parseFloat(winAmount8) - (parseFloat(step1) + parseFloat(step2) + parseFloat(step3) + parseFloat(step4) + parseFloat(step5) + parseFloat(step6) + parseFloat(step7) + parseFloat(step8))).toFixed(2);
+        document.getElementById("netProfit9").innerText = (parseFloat(winAmount9) - (parseFloat(step1) + parseFloat(step2) + parseFloat(step3) + parseFloat(step4) + parseFloat(step5) + parseFloat(step6) + parseFloat(step7) + parseFloat(step8) + parseFloat(step9))).toFixed(2);
     }
 }
 
