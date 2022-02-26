@@ -4,15 +4,15 @@ function myFunction() {
     if (value != NaN) {
 
         let stepPercentage = [
-            0.13, // Step 1
-            0.3, // Step 2
-            0.6, // Step 3
-            1.3, // Step 4
-            2.8, // Step 5
-            5.8, // Step 6
-            12, // Step 7
-            25, // Step 8
-            52.06, // Step 9
+            0.15, // Step 1
+            0.31, // Step 2
+            0.643, // Step 3
+            1.334, // Step 4
+            2.82, // Step 5
+            5.83, // Step 6
+            12.3, // Step 7
+            25.2, // Step 8
+            51.2, // Step 9
         ];
 
 
